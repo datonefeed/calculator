@@ -5,6 +5,14 @@ function Reset(){
     document.getElementById("kq").value=null;
     document.getElementById("log").innerText="";
 }
+function getLetters(str){
+    var letters = str.match(/[ab]/g); // lọc các chữ cái a hoặc b từ chuỗi str
+    if (letters) { // nếu tìm thấy các chữ cái a hoặc b thì sử dụng join() để ghép các phần tử thành một chuỗi
+        return letters.join("");
+    } else { // nếu không tìm thấy thì trả về một chuỗi rỗng
+        return "";
+    }
+}
 // hàm kiểm tra số hay chữ
 function check(a, b, c){
     // c là số
@@ -36,10 +44,9 @@ function check(a, b, c){
 function Sum(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
-    var result1, result2;
 
-    // kiểm tra giá trị của a
-    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+     // kiểm tra giá trị của a
+     if (a === "a"||a === "b"||/[^\d+*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -50,7 +57,7 @@ function Sum(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (b === "b"||b === "a"||/[^\d+*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
@@ -61,31 +68,16 @@ function Sum(){
     }
 
     var s = result1 + result2;
-    check(a, b, s); // kiểm tra giá trị nhập vào a, b, s trong hàm check
+    check(a, b, s); 
 }
-//     try {
-//         var result1 = eval(a); 
-//         var result2 = eval(b);
-//         }
-//     catch (error) {
-        
-//         var result1 = NaN;
-//         var result2 = NaN;
-//     }
-
-//     var s = result1 + result2;
-//     check(a, b, s); 
-// }
 
 //devide
 function Devide(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
-    var result1, result2;
-
     // kiểm tra giá trị của a
-    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+    if (a === "a"||a === "b"||/[^\d+*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -96,7 +88,7 @@ function Devide(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (b === "b"||b === "a"||/[^\d+*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
@@ -105,7 +97,7 @@ function Devide(){
             result2 = NaN;
         }
     }
- 
+
     if(result2==0){
         document.getElementById("log").innerText="Please enter num 2 other than 0!";
         document.getElementById("b").value=null;
@@ -120,10 +112,8 @@ function Multi(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
-    var result1, result2;
-
     // kiểm tra giá trị của a
-    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+    if (a === "a"||a === "b"||/[^\d+*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -134,7 +124,7 @@ function Multi(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (b === "b"||b === "a"||/[^\d+*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
@@ -151,10 +141,8 @@ function Minus(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
-    var result1, result2;
-
     // kiểm tra giá trị của a
-    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+    if (a === "a"||a === "b"||/[^\d+*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -165,7 +153,7 @@ function Minus(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (b === "b"||b === "a"||/[^\d+*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
@@ -174,6 +162,7 @@ function Minus(){
             result2 = NaN;
         }
     }
+
 
     var s = result1 - result2;
     check(a, b, s);
