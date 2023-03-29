@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+	<div class="box">
+		<h2 class="name">CALCULATOR</h2>
+		<form autocomplete="off">
+			<div class="form-cal">
+				<p class="each-input">
+					<span class="label">Num 1</span>
+					<input type="text" class="value" id="a">
+				</p>
+				<p class="each-input">
+					<span class="label">Num 2</span>
+					<input type="text" class="value" id="b">
+				</p>
+				<p class="each-input">
+					<span class="label">Result</span>
+					<input type="text" class="value" id="kq" readonly>
+				</p>
+				<p class="btn-cal">
+					<button type="button" class="btn" onclick="Sum()">
+						<i class="fa-solid fa-plus"></i>
+					</button>
+					<button type="button" class="btn" onclick="Minus()">
+						<i class="fa-solid fa-minus"></i>
+					</button>
+					<button type="button" class="btn" onclick="Multi()">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+					<button type="button" class="btn" onclick="Devide()">
+						<i class="fa-solid fa-divide"></i>
+					</button>
+					<button type="button" class="btn" onclick="Reset()">
+						<i class="fa-solid fa-rotate-right"></i>
+					</button>
+				</p>
+				<p id="log"></p>
+			</div>	
+		</form>
+	</div>
+	<script src="main.js">	
+	</script>
+</body>
+</html>
