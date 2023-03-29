@@ -36,30 +36,74 @@ function check(a, b, c){
 function Sum(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
+    var result1, result2;
 
-    try {
-        var result1 = eval(a); 
-        var result2 = eval(b);
-    } catch (error) {
-        var result1 = NaN;
-        var result2 = NaN;
+    // kiểm tra giá trị của a
+    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+        result1 = NaN;
+    } else {
+        try {
+            result1 = eval(a); // giải biểu thức trong a thành kết quả. Ví dụ: a = "2+3" thì result1 = 5
+        } catch (error) {
+            result1 = NaN;
+        }
+    }
+
+    // kiểm tra giá trị của b
+    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+        result2 = NaN;
+    } else {
+        try {
+            result2 = eval(b);
+        } catch (error) {
+            result2 = NaN;
+        }
     }
 
     var s = result1 + result2;
-    check(a, b, s); 
+    check(a, b, s); // kiểm tra giá trị nhập vào a, b, s trong hàm check
 }
+//     try {
+//         var result1 = eval(a); 
+//         var result2 = eval(b);
+//         }
+//     catch (error) {
+        
+//         var result1 = NaN;
+//         var result2 = NaN;
+//     }
+
+//     var s = result1 + result2;
+//     check(a, b, s); 
+// }
 
 //devide
 function Devide(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
-    try {
-        var result1 = eval(a); 
-        var result2 = eval(b);
-    } catch (error) {
-        var result1 = NaN;
-        var result2 = NaN;
+    var result1, result2;
+
+    // kiểm tra giá trị của a
+    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+        result1 = NaN;
+    } else {
+        try {
+            result1 = eval(a); // giải biểu thức trong a thành kết quả. Ví dụ: a = "2+3" thì result1 = 5
+        } catch (error) {
+            result1 = NaN;
+        }
+    }
+
+    // kiểm tra giá trị của b
+    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+        result2 = NaN;
+    } else {
+        try {
+            result2 = eval(b);
+        } catch (error) {
+            result2 = NaN;
+        }
     }
  
     if(result2==0){
@@ -76,12 +120,28 @@ function Multi(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
-    try {
-        var result1 = eval(a); 
-        var result2 = eval(b);
-    } catch (error) {
-        var result1 = NaN;
-        var result2 = NaN;
+    var result1, result2;
+
+    // kiểm tra giá trị của a
+    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+        result1 = NaN;
+    } else {
+        try {
+            result1 = eval(a); // giải biểu thức trong a thành kết quả. Ví dụ: a = "2+3" thì result1 = 5
+        } catch (error) {
+            result1 = NaN;
+        }
+    }
+
+    // kiểm tra giá trị của b
+    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+        result2 = NaN;
+    } else {
+        try {
+            result2 = eval(b);
+        } catch (error) {
+            result2 = NaN;
+        }
     }
 
     var s = result1 * result2;
@@ -91,12 +151,28 @@ function Minus(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
-    try {
-        var result1 = eval(a); 
-        var result2 = eval(b);
-    } catch (error) {
-        var result1 = NaN;
-        var result2 = NaN;
+    var result1, result2;
+
+    // kiểm tra giá trị của a
+    if (a === "a"||a === "b") { // nếu a là kí tự a thì gán giá trị bằng NaN
+        result1 = NaN;
+    } else {
+        try {
+            result1 = eval(a); // giải biểu thức trong a thành kết quả. Ví dụ: a = "2+3" thì result1 = 5
+        } catch (error) {
+            result1 = NaN;
+        }
+    }
+
+    // kiểm tra giá trị của b
+    if (b === "b"||b==="a") { // nếu b là kí tự b thì gán giá trị bằng NaN
+        result2 = NaN;
+    } else {
+        try {
+            result2 = eval(b);
+        } catch (error) {
+            result2 = NaN;
+        }
     }
 
     var s = result1 - result2;
