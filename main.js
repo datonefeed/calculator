@@ -5,14 +5,6 @@ function Reset(){
     document.getElementById("kq").value=null;
     document.getElementById("log").innerText="";
 }
-function getLetters(str){
-    var letters = str.match(/[ab]/g); // lọc các chữ cái a hoặc b từ chuỗi str
-    if (letters) { // nếu tìm thấy các chữ cái a hoặc b thì sử dụng join() để ghép các phần tử thành một chuỗi
-        return letters.join("");
-    } else { // nếu không tìm thấy thì trả về một chuỗi rỗng
-        return "";
-    }
-}
 // hàm kiểm tra số hay chữ
 function check(a, b, c){
     // c là số
@@ -167,3 +159,15 @@ function Minus(){
     var s = result1 - result2;
     check(a, b, s);
 }
+
+
+const input1 = document.getElementById('a');
+const input2 = document.getElementById('b');
+
+  input1.addEventListener('keydown', (event) => {
+    // Nếu nhấn phím Tab hoặc Enter
+    if (event.key === "Enter" || event.Code === "Enter") {
+      event.preventDefault();
+      input2.focus();
+    }
+  });
