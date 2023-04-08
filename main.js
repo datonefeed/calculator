@@ -70,7 +70,7 @@ function Sum(){
     }
 
     var s = result1 + result2;
-    check(a, b, s); 
+    check(result1, result2, s); 
 }
 
 //devide
