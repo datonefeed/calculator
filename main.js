@@ -19,13 +19,23 @@ function check(a, b, c){
             document.getElementById("b").value=null;
             document.getElementById("kq").value=null;
         }
-        else
-        if(isNaN(a)==true ){
+        else if(isNaN(a)==true){
             document.getElementById("log").innerText="Please enter num 1 as number or expression!";
             document.getElementById("a").value=null;
             document.getElementById("kq").value=null;
         }
-        else{
+        else if(a==''){
+            document.getElementById("log").innerText="Please enter num 1 as number or expression!";
+            document.getElementById("a").value=null;
+            document.getElementById("kq").value=null;
+        }
+        else if(b==''){
+            document.getElementById("log").innerText="Please enter num 2 as number or expression!";
+            document.getElementById("b").value=null;
+            document.getElementById("kq").value=null;
+        }
+       
+        else if (isNaN(b)==true){
             document.getElementById("log").innerText="Please enter num 2 as number or expression!";
             document.getElementById("b").value=null;
             document.getElementById("kq").value=null;
