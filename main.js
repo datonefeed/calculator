@@ -48,7 +48,7 @@ function Sum(){
     var b=document.getElementById("b").value;
 
      // kiểm tra giá trị của a
-     if (a === "a"||a === "b"||/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
+     if (/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -59,7 +59,7 @@ function Sum(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b === "a"||/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
@@ -79,7 +79,7 @@ function Devide(){
     var b=document.getElementById("b").value;
 
     // kiểm tra giá trị của a
-    if (a === "a"||a === "b"||/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
+    if (/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -90,7 +90,7 @@ function Devide(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b === "a"||/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
@@ -110,12 +110,13 @@ function Devide(){
         check(a,b,d);
     }
 }
+//Multi
 function Multi(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
     // kiểm tra giá trị của a
-    if (a === "a"||a === "b"||/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
+    if (/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -126,7 +127,7 @@ function Multi(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b === "a"||/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
@@ -139,12 +140,13 @@ function Multi(){
     var s = result1 * result2;
     check(a, b, s);
 }
+// Minus
 function Minus(){
     var a=document.getElementById("a").value;
     var b=document.getElementById("b").value;
 
     // kiểm tra giá trị của a
-    if (a === "a"||a === "b"||/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
+    if (/[^\d +*/().-]/g.test(a)) { // nếu a là kí tự a thì gán giá trị bằng NaN
         result1 = NaN;
     } else {
         try {
@@ -155,7 +157,7 @@ function Minus(){
     }
 
     // kiểm tra giá trị của b
-    if (b === "b"||b === "a"||/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
+    if (/[^\d +*/().-]/g.test(b)) { // nếu b là kí tự b thì gán giá trị bằng NaN
         result2 = NaN;
     } else {
         try {
